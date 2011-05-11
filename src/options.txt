@@ -1,0 +1,34 @@
+{
+	"version" : "1.0b",
+	"canOverwrite" : false,
+	
+	"preInclude" : [],
+	"postInclude : [],
+	
+	"tags" : {
+		"startDelimiter" : "{{",
+		"endDelimiter" : "}}",
+		
+		"constant" : "_",
+		"comment" : "*",
+		"command" : ":",
+		"output" : "=",		
+		"raw" : "~",	
+	},
+	
+	"url" : {
+		"separator" : "&",
+		"equality" : "="
+	},
+	
+	"cache" : {
+		"ses" : true,
+		"sest" : true,
+		"cssx" : true,
+	},
+	
+	"performance" : {
+		"verifyDependencies" : true,
+		"verifyTimestamps" : true
+	}	
+}

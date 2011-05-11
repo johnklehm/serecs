@@ -1,0 +1,12 @@
+env = Environment(TARGET_ARCH='x86');
+
+vLibs = [	'libboost_filesystem-vc100-mt',
+			'libboost_system-vc100-mt'];
+# LIBS=vLibs,
+
+env.AppendUnique(CXXFLAGS=Split("/EHsc /ERRORREPORT:QUEUE /MD") );
+env.Append(CPPPATH = ["#third_party/includes"]);
+env.Append(LIBPATH = ["#lib/win/boost"]);
+env['PDB'] = 'program.pdb'
+
+env.Program("program", Glob('*.cpp'),LIBS=vLibs)

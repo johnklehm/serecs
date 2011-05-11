@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title><%=title=%></title>
+		<%:if (cssFile != undefined) :%>
+			<link href=<%=cssFile%> />
+		<%:endif :%>
+		<%#_fileName%>
+	</head>
+	<body>
+		<%:function (var1,var2,var3) :%>
+			<%:for (var i = 0; i < items.length; i++) :%>
+			<option><%=items[i]=%></option>
+			<%*This is a comment*%>
+			<%#include file="what!%>
+			<%:endfor:%>
+			<%~
+				output("<h1>Hello World!");		
+			~%>
+		<%: endfunction :%>
+	</body>
+	<%#js_minify%>
+
+</html>
